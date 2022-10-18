@@ -2,6 +2,8 @@
     --color-grey: #eee;
     --color-grey-dark: #ddd;
     --color-black: #000;
+    --color-yellow: #f1c40f;
+    --color-orange: darkorange;
 }
 
 body {
@@ -11,6 +13,7 @@ body {
     line-height: 1.4;
     background-color: var(--color-grey);
     margin: 0;
+    width: 100vw;
 }
 
   
@@ -19,12 +22,18 @@ a {
     text-decoration: none;
 }
 
+section {
+    margin: 20px 0;
+}
+
 /* HEADER */
 header {
     position: fixed;
     top: 0;
     min-height: 75px;
+    /*
     padding: 0px 20px;
+    */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -181,11 +190,36 @@ li {
     display: flex;
 }
 
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-orange);
+    width: 20vw;
+}
+
 .fa-fire:before {
     content: "\f06d";
 }
 
+.desc {
+    width: 80vw;
+}
+
 /* SECTION how it works */
+
+#how-it-works {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+#how-it-works>iframe {
+    max-width: 560px;
+    width: 100%;
+}
 
 
 /* SECTION princing */
@@ -194,20 +228,60 @@ li {
 }
 
 .product {
-    border: solid 1px;
-    margin: 10px;
-    border-radius: 3px;
-    display: block;
+    display: flex;
     align-items: center;
     text-align: center;
     flex-direction: column;
+    border: solid 1px;
+    margin: 10px;
+    border-radius: 3px;
     width: 100%;
 }
 
-.level {
-    justify-content: center;
+.product>.level {
+    background-color: var(--color-grey-dark);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.product>ol {
+    padding: 0;
+}
+
+.product>button {
+    border: 0;
+    background-color: var(--color-yellow);
+    font-weight: 400;
+    margin: 15px 0;
 }
 
 .btn {
-    justify-content: center;
+    cursor: pointer;
+    border-radius: 2px;
+    text-transform: uppercase;
+    height: 40px;
+    width: 75px;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--color-grey-dark);
+    padding: 20px;
+}
+
+footer>ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer>ul>li{
+    padding: 0 10px
+}
+
+footer>span{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
